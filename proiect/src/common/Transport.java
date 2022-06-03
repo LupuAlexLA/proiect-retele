@@ -29,7 +29,7 @@ public class Transport {
 		byte[] buffer = outputStream.toByteArray();
 		socket.getOutputStream().write(buffer.length);
 		socket.getOutputStream().write(buffer, 0, buffer.length);
-		socket.getOutputStream().flush(); // pt ca nu e autoflushable
+		socket.getOutputStream().flush(); 
 	}
 
 	public static <T extends Serializable> void sendCandidates(Map<String, Integer> storage, Socket socket)
@@ -43,6 +43,6 @@ public class Transport {
 		System.out.println(socket.getPort());
 		socket.getOutputStream().write(buffer.length);
 		socket.getOutputStream().write(buffer, 0, buffer.length);
-		socket.getOutputStream().flush(); // pt ca nu e autoflushable
+		socket.getOutputStream().flush(); 
 	}
 }
